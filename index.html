@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dario. | Portafolio</title>
+    <style>
+        /* --- VARIABLES DE COLOR Y FUENTES (El secreto del diseño) --- */
+        :root {
+            --navy: #0a192f;
+            --light-navy: #112240;
+            --green: #64ffda; /* El color cyan de acento */
+            --slate: #8892b0; /* Texto secundario */
+            --light-slate: #a8b2d1;
+            --lightest-slate: #ccd6f6; /* Títulos y texto principal */
+            
+            --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+            --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+        }
+
+        /* --- RESET Y ESTILOS GLOBALES --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth; /* Esto hace que baje suave al hacer clic en el menú */
+        }
+
+        body {
+            background-color: var(--navy);
+            color: var(--slate);
+            font-family: var(--font-sans);
+            line-height: 1.3;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* --- NAVEGACIÓN --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 50px;
+            height: 100px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(10, 25, 47, 0.85);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        .logo {
+            color: var(--green);
+            font-family: var(--font-mono);
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            font-family: var(--font-mono);
+            font-size: 13px;
+        }
+
+        .nav-links li {
+            margin: 0 5px;
+        }
+
+        .nav-links a {
+            padding: 10px;
+            color: var(--lightest-slate);
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--green);
+        }
+
+        .nav-links a span {
+            color: var(--green);
+            margin-right: 5px;
+        }
+
+        .btn-resume {
+            color: var(--green);
+            background-color: transparent;
+            border: 1px solid var(--green);
+            border-radius: 4px;
+            padding: 0.75rem 1rem;
+            font-family: var(--font-mono);
+            font-size: 13px;
+            margin-left: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-resume:hover {
+            background-color: rgba(100, 255, 218, 0.1);
+        }
+
+        /* --- CONTENEDOR PRINCIPAL --- */
+        main {
+            padding: 0 150px;
+            margin: 0 auto;
+            max-width: 1600px;
+        }
+
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* --- SECCIÓN HERO --- */
+        #hero h1 {
+            color: var(--green);
+            font-family: var(--font-mono);
+            font-size: clamp(14px, 5vw, 16px);
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+
+        #hero h2 {
+            color: var(--lightest-slate);
+            font-size: clamp(40px, 8vw, 80px);
+            font-weight: 600;
+        }
+
+        #hero h3 {
+            color: var(--slate);
+            font-size: clamp(40px, 8vw, 80px);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        #hero p {
+            max-width: 540px;
+            font-size: 20px;
+            margin-bottom: 50px;
+        }
+
+        .btn-contact {
+            color: var(--green);
+            background-color: transparent;
+            border: 1px solid var(--green);
+            border-radius: 4px;
+            padding: 1.25rem 1.75rem;
+            font-family: var(--font-mono);
+            font-size: 14px;
+            cursor: pointer;
+            width: fit-content;
+        }
+
+        .btn-contact:hover {
+            background-color: rgba(100, 255, 218, 0.1);
+        }
+
+        /* --- SECCIÓN SOBRE MI --- */
+        .section-heading {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            font-size: clamp(26px, 5vw, 32px);
+            white-space: nowrap;
+            color: var(--lightest-slate);
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+
+        .section-heading::before {
+            content: "01. ";
+            color: var(--green);
+            font-family: var(--font-mono);
+            font-size: clamp(16px, 3vw, 20px);
+            margin-right: 10px;
+            font-weight: 400;
+        }
+
+        .section-heading::after {
+            content: "";
+            display: block;
+            width: 300px;
+            height: 1px;
+            margin-left: 20px;
+            background-color: var(--light-navy);
+        }
+
+        .about-content {
+            display: flex;
+            gap: 50px;
+        }
+
+        .about-text {
+            flex: 3;
+            font-size: 18px;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+        }
+
+        .skills-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(140px, 200px));
+            gap: 0 10px;
+            padding: 0;
+            margin: 20px 0 0 0;
+            overflow: hidden;
+            list-style: none;
+        }
+
+        .skills-list li {
+            position: relative;
+            margin-bottom: 10px;
+            padding-left: 20px;
+            font-family: var(--font-mono);
+            font-size: 13px;
+            color: var(--slate);
+        }
+
+        .skills-list li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--green);
+            line-height: 12px;
+        }
+
+        .about-pic {
+            flex: 2;
+            position: relative;
+        }
+
+        .wrapper {
+            display: block;
+            position: relative;
+            width: 100%;
+            border-radius: 4px;
+            background-color: var(--green);
+        }
+        
+        /* Caja de imagen placeholder para que veas el efecto */
+        .wrapper .img-placeholder {
+            width: 100%;
+            height: 300px;
+            background-color: var(--light-navy);
+            mix-blend-mode: multiply;
+            filter: grayscale(100%) contrast(1);
+            transition: all 0.2s ease-in-out;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 100px;
+            color: var(--navy);
+            font-weight: bold;
+        }
+
+        .wrapper:hover .img-placeholder {
+            filter: none;
+            mix-blend-mode: normal;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">&lt;D /&gt;</div>
+        <ul class="nav-links">
+            <li><a href="#sobre-mi"><span>01.</span> Sobre Mí</a></li>
+            <li><a href="#proyectos"><span>02.</span> Proyectos</a></li>
+            <li><a href="#contacto"><span>03.</span> Contacto</a></li>
+            <li><button class="btn-resume">Curriculum</button></li>
+        </ul>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Hola, mi nombre es</h1>
+            <h2>Dario.</h2>
+            <h3>Creo experiencias digitales.</h3>
+            <p>Soy un desarrollador web especializado en crear sitios web y aplicaciones excepcionales. Actualmente enfocado en construir productos accesibles y centrados en el usuario.</p>
+            <button class="btn-contact">✉ Contactar</button>
+        </section>
+
+        <section id="sobre-mi">
+            <h2 class="section-heading">Sobre Mí</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>¡Hola! Soy Dario, un desarrollador web apasionado por crear cosas que viven en internet. Mi interés en el desarrollo web comenzó cuando decidí crear mi primera página web — resultó que personalizar un tema de WordPress me enseñó mucho sobre HTML y CSS.</p>
+                    <p>Hoy en día, he tenido el privilegio de trabajar en diversos proyectos, desde sitios web corporativos hasta aplicaciones web complejas. Mi enfoque principal es construir productos digitales accesibles e inclusivos para una variedad de clientes.</p>
+                    <p>Estas son algunas tecnologías con las que he estado trabajando recientemente:</p>
+                    
+                    <ul class="skills-list">
+                        <li>JavaScript (ES6+)</li>
+                        <li>TypeScript</li>
+                        <li>React</li>
+                        <li>Next.js</li>
+                        <li>Node.js</li>
+                        <li>Tailwind CSS</li>
+                        <li>PostgreSQL</li>
+                        <li>Git</li>
+                    </ul>
+                </div>
+                <div class="about-pic">
+                    <div class="wrapper">
+                        <div class="img-placeholder">D</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" style="min-height: 100vh; padding-top: 100px;">
+            <h2 class="section-heading" style="::before{content: '02. '}">Proyectos</h2>
+            <p>Aquí irán los proyectos...</p>
+        </section>
+
+        <section id="contacto" style="min-height: 100vh; padding-top: 100px;">
+            <p>Aquí irá el contacto...</p>
+        </section>
+    </main>
+
+</body>
+</html>
