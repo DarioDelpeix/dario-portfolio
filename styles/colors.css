@@ -1,0 +1,95 @@
+body {
+    background-color: #0a192f;
+    background-image: linear-gradient(to bottom, #15325c 0%, #0a192f 45%, #050b16 100%);
+    color: #8892b0;
+}
+
+header {
+    background-color: rgba(10, 25, 47, 0.18);
+}
+
+.menu-toggle span {
+    background-color: #64ffda;
+}
+
+.nav-links a {
+    color: #ccd6f6;
+}
+
+.nav-links a:hover {
+    color: #64ffda;
+}
+
+.nav-links a span {
+    color: #64ffda;
+}
+
+.nav-links .btn-curriculum {
+    color: #64ffda;
+    background-color: transparent;
+    border-color: #64ffda;
+}
+
+.nav-links .btn-curriculum:hover {
+    color: #64ffda;
+    background-color: rgba(100, 255, 218, 0.1);
+}
+
+#hero h1 {
+    color: #64ffda;
+}
+
+#hero h2 {
+    color: #ccd6f6;
+}
+
+#hero h3 {
+    color: #8892b0;
+}
+
+.btn-contact {
+    color: #64ffda;
+    background-color: transparent;
+    border-color: #64ffda;
+}
+
+.btn-contact:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+}
+
+.section-heading {
+    color: #ccd6f6;
+}
+
+.section-number {
+    color: #64ffda;
+}
+
+.section-heading::after {
+    background-color: #112240;
+}
+
+.skills-list li {
+    color: #8892b0;
+}
+
+.flecha-lista {
+    color: #64ffda;
+}
+
+.wrapper {
+    background-color: #64ffda;
+}
+
+.wrapper .img-placeholder {
+    background-color: #112240;
+    color: #0a192f;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        border-color: #112240;
+        background-color: rgba(10, 25, 47, 0.98);
+        box-shadow: 0 14px 30px rgba(2, 12, 27, 0.5);
+    }
+}

@@ -10,11 +10,6 @@ body {
     font-size: 13px;
 }
 
-.nav-links .btn-curriculum {
-    font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
-    font-size: 13px;
-}
-
 /* Seccion de bienvenida */
 #hero h1 {
     font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;

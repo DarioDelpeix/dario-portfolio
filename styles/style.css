@@ -1,9 +1,20 @@
 /* CSS general */
 @import url('./reset.css');
 @import url('./layout.css');
+@import url('./colors.css');
 @import url('./fonts.css');
 
-/*estilos globales*/
+/* Estilos generales */
 html {
-	scroll-behavior: smooth; /* hace que los links se desplacen suavemente */
+    scroll-behavior: smooth; /* al darle a los links del menu hace que se desplaze suavemente */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none; /* quita el subrayado de los links */
 }
