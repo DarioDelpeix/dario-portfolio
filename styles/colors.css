@@ -61,6 +61,10 @@ header {
 }
 
 /* Seccion de sobre mi */
+section + section::before {
+    background-color: rgba(100, 255, 218, 0.18);
+}
+
 .section-heading {
     color: #ccd6f6;
 }

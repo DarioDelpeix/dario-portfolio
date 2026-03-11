@@ -88,14 +88,30 @@ main {
     max-width: 1600px;
 }
 
+/* Secciones generales */
 section {
-    min-height: 100vh;
+    position: relative;
+    min-height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 80px 0;
+}
+
+section + section::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 0 0 56px;
 }
 
 /* Seccion de bienvenida */
+#hero {
+    min-height: 100vh;
+    padding-top: 100px;
+}
+
 #hero h1 {
     margin-bottom: 30px;
 }
@@ -120,7 +136,7 @@ section {
 /* Seccion de sobre mi */
 .section-heading {
     display: flex;
-    align-items: center;
+    align-items: baseline; 
     width: 100%;
     white-space: nowrap;
     margin-bottom: 40px;
@@ -128,14 +144,6 @@ section {
 
 .section-number {
     margin-right: 10px;
-}
-
-.section-heading::after {
-    content: "";
-    display: block;
-    width: 300px;
-    height: 1px;
-    margin-left: 20px;
 }
 
 .about-content {
@@ -191,9 +199,13 @@ section {
 
 /* Seccion de proyectos */
 .projects-intro {
-    max-width: 760px;
     margin-bottom: 24px;
     line-height: 1.6;
+    text-align: right;
+}
+
+#proyectos .section-heading {
+    justify-content: flex-end; /* pone el titulo a la derecha */
 }
 
 .projects-grid {
@@ -253,12 +265,12 @@ section {
 
 #proyectos,
 #contacto {
-    min-height: 100vh;
     padding-top: 100px;
 }
 
 /* --------------- Media Queries para tablets y moviles --------------- */
 @media (max-width: 768px) {
+    /* Header */
     header {
         height: 85px;
         padding: 14px 18px;
@@ -317,13 +329,25 @@ section {
         text-align: center;
     }
 
+    /* Contenedor principal */
     main {
         padding: 0 24px;
     }
 
+    /* Secciones generales */
     section {
         min-height: auto;
-        padding: 120px 0 50px;
+        padding: 72px 0 40px;
+    }
+
+    section + section::before {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    #hero {
+        min-height: auto;
+        padding-top: 120px;
     }
 
     #proyectos,
@@ -331,10 +355,7 @@ section {
         padding-top: 120px;
     }
 
-    .section-heading::after {
-        width: 100%;
-    }
-
+    /* Seccion sobre mi */
     .about-content {
         flex-direction: column;
         gap: 24px;
@@ -345,7 +366,12 @@ section {
         justify-content: center;
     }
 
+    /* Seccion proyectos */
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    #proyectos .projects-intro {
+        text-align: left;
     }
 }
