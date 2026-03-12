@@ -118,6 +118,30 @@ section + section::before {
     background-color: rgba(100, 255, 218, 0.1);
 }
 
+/* Seccion de contacto */
+.contact-intro {
+    color: #8892b0;
+}
+
+.contact-card {
+    border-color: #112240;
+    background-color: rgba(17, 34, 64, 0.35);
+    color: #ccd6f6;
+}
+
+.contact-card:hover {
+    background-color: rgba(100, 255, 218, 0.06);
+    border-color: #64ffda;
+}
+
+.contact-icon {
+    color: #64ffda;
+}
+
+.contact-value {
+    color: #8892b0;
+}
+
 .projects-more {
     color: #64ffda;
     border-color: rgba(100, 255, 218, 0.45);
