@@ -237,7 +237,7 @@ section + section::before {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 18px;
+    margin-bottom: auto;
     list-style: none;
 }
 
@@ -249,14 +249,12 @@ section + section::before {
 }
 
 .project-link {
-    margin-top: auto;
     width: fit-content;
     border: 1px solid;
     border-radius: 6px;
     padding: 8px 12px;
     transition: background-color 0.3s ease, color 0.3s ease;
-    margin-bottom: 10px;
-}
+    margin-top: 16px;}
 
 .projects-more {
     display: inline-block;
