@@ -291,6 +291,24 @@ section + section::before {
     line-height: 1.7;
 }
 
+.contact-extra {
+    width: min(100%, 720px);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.contact-location-text {
+    margin: 0;
+}
+
+.contact-iframe {
+    width: 100%;
+    height: 220px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
 .contact-links {
     display: flex;
     gap: 24px;
@@ -419,6 +437,14 @@ section + section::before {
         flex-direction: column;
         width: 100%;
         align-items: center;
+    }
+
+    .contact-extra {
+        width: 100%;
+    }
+
+    .contact-iframe {
+        height: 200px;
     }
 
     .contact-card {

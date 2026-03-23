@@ -57,6 +57,10 @@ body {
     font-size: 13px;
 }
 
+.contact-location-text {
+    font-size: 0.95rem;
+}
+
 .wrapper .img-placeholder {
     font-size: 100px;
     font-weight: bold;
