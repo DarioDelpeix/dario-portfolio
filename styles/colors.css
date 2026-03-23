@@ -85,6 +85,13 @@ section + section::before {
     color: #64ffda;
 }
 
+.perfil-video,
+.perfil img {
+    border: 1px solid #112240;
+    box-shadow: 0 10px 24px rgba(2, 12, 27, 0.28);
+    background-color: rgba(17, 34, 64, 0.35);
+}
+
 /* Seccion de proyectos */
 .projects-intro {
     color: #8892b0;
