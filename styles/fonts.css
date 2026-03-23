@@ -61,6 +61,11 @@ body {
     font-size: 0.95rem;
 }
 
+footer p {
+    font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+    font-size: 0.8rem;
+}
+
 .wrapper .img-placeholder {
     font-size: 100px;
     font-weight: bold;
