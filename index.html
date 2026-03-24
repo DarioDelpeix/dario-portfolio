@@ -60,10 +60,11 @@
                 </div>
                 <div class="about-perfil">
                     <div class="perfil">
-                        <video class="perfil-video" controls playsinline preload="metadata" poster="./img/perfil.png"> <!-- video con mi foto de perfil y controles de video -->
+                        <video id="perfil-video" class="perfil-video" controls playsinline preload="metadata" poster="./img/perfil.png"> <!-- video con mi foto de perfil y controles de video -->
                             <source src="./src/video_dario.mp4" type="video/mp4">
                             Tu navegador no soporta el video HTML5.
                         </video>
+                        <button class="perfil-play-btn" type="button" aria-controls="perfil-video" aria-label="Reproducir video">Play</button>
                     </div>
                 </div>
             </div>
@@ -147,6 +148,7 @@
     </footer>
 
     <script src="./js/menu.js"></script>
+    <script src="./js/video.js"></script>
 
 </body>
 </html>
