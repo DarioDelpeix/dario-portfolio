@@ -514,7 +514,7 @@ footer p {
         background-color: #64ffda;
     }
 
-    /* Evita el boton de play superpuesto grande en navegadores WebKit moviles */
+    /* Evita el boton de play superpuesto grande en navegadores */
     .perfil-video::-webkit-media-controls-overlay-play-button,
     .perfil-video::-webkit-media-controls-start-playback-button {
         display: none !important;
