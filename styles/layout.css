@@ -487,6 +487,13 @@ footer p {
         max-width: 70%;
     }
 
+    /* Evita el boton de play superpuesto grande en navegadores WebKit moviles */
+    .perfil-video::-webkit-media-controls-overlay-play-button,
+    .perfil-video::-webkit-media-controls-start-playback-button {
+        display: none !important;
+        -webkit-appearance: none;
+    }
+
     /* Seccion proyectos */
     .projects-grid {
         grid-template-columns: 1fr;
