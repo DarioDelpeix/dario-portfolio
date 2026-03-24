@@ -315,14 +315,6 @@ section + section::before {
     border-radius: 10px;
 }
 
-.contact-map-link {
-    width: fit-content;
-    margin: 0 auto;
-    border: 1px solid;
-    border-radius: 6px;
-    padding: 8px 12px;
-}
-
 .contact-links {
     display: flex;
     gap: 24px;
