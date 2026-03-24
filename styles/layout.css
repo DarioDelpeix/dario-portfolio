@@ -500,18 +500,11 @@ footer p {
         justify-content: center;
         min-width: 88px;
         padding: 8px 14px;
-        border: 1px solid #64ffda;
+        border: 1px solid;
         border-radius: 999px;
-        background-color: rgba(17, 34, 64, 0.9);
-        color: #64ffda;
         font-weight: 600;
         cursor: pointer;
         margin-top: 10px;
-    }
-
-    .perfil-play-btn.is-playing {
-        color: #0a192f;
-        background-color: #64ffda;
     }
 
     /* Evita el boton de play superpuesto grande en navegadores */
